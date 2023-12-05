@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car and Bike Companies</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        form {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        @media only screen and (min-width: 600px) {
+            form {
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Car and Bike Reviews and Variants</h1>
+    </header>
+
+    <form>
+        <label for="car-dropdown">Select a Car Company:</label>
+        <select id="car-dropdown">
+            <option value="volvo">Volvo</option>
+            <option value="toyota">Toyota</option>
+            <option value="honda">Honda</option>
+            <option value="ford">Ford</option>
+            <option value="bmw">BMW</option>
+        </select>
+
+        <label for="bike-dropdown">Select a Bike Company:</label>
+        <select id="bike-dropdown">
+            <option value="royal-enfield">Royal-Enfield</option>
+            <option value="Harley-Davidson">Harley-Davidson</option>
+            <option value="yamaha">Yamaha</option>
+            <option value="suzuki">Suzuki</option>
+            <option value="ducati">Ducati</option>
+            <option value="kawasaki">Kawasaki</option>
+        </select>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
