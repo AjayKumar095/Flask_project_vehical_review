@@ -23,7 +23,7 @@ else:
 response=requests.get(main_url)
 
 html_source=bs(response.text,'html.parser')
-sorted_html_page=html_source.find_all('li', {'class':"col-lg-6 txt-c rel modelItem"})
+sorted_html_page=html_source.find('li', {'class':"col-lg-6 txt-c rel modelItem"})
 
 links=[]
 for i in sorted_html_page:
