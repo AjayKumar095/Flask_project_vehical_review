@@ -64,7 +64,7 @@
         <h1>Car and Bike Reviews and Specifications</h1>
     </header>
 
-    <form>
+    <form action="/review" method="POST">
         <label for="car-dropdown">Select a Car Company:</label>
         <select id="car-dropdown">
             <option value="volvo">Volvo</option>
@@ -85,7 +85,35 @@
         </select>
         
         <button type="submit">Submit</button>
+        <button type="button" id="cancel-button" disabled>Reset</button>
     </form>
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var carDropdown = document.getElementById('car-dropdown');
+        var bikeDropdown = document.getElementById('bike-dropdown');
+        var cancelButton = document.getElementById('cancel-button');
+
+        carDropdown.addEventListener('change', function() {
+            // Disable the bike dropdown when a car is selected
+            bikeDropdown.disabled = true;
+            cancelButton.disabled = false; // Enable the cancel button
+        });
+
+        bikeDropdown.addEventListener('change', function() {
+            // Disable the car dropdown when a bike is selected
+            carDropdown.disabled = true;
+            cancelButton.disabled = false; // Enable the cancel button
+        });
+
+        cancelButton.addEventListener('click', function() {
+            // Reset both dropdowns and disable the cancel button
+            carDropdown.disabled = false;
+            bikeDropdown.disabled = false;
+            cancelButton.disabled = true;
+        });
+    });
+</script>
 
 </html>
