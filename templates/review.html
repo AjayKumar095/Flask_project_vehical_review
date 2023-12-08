@@ -68,20 +68,16 @@
                 <th>Price</th>
                 <th>Specification</th>
                 <th>Features</th>
-                <th>Expert's Conclusion</th>
             </tr>
         </thead>
         <tbody>
-            {% for product in products %}
+            {% for Vehicle in result_data %}
                 <tr>
-                    <td>{{ loop.index }}</td>
-                    <td>{{ Vehicle.name }}</td>
-                    <td>{{ Vehicle.price }}</td>
-                    <td>{{ Vehicle.specification}}</td>
-                    <td>{{ Vehicle.Features  }}</td>
-                    <td>{{ Vehicle.Expert_Conclusion }}</td>
-                        
-                    
+                    <td>{{ loop['index']}}</td>
+                    <td>{{ Vehicle['Model']}}</td>
+                    <td>{{ Vehicle['Price']}}</td>
+                    <td>{{ Vehicle['Specifications']}}</td>
+                    <td>{{ Vehicle['Features']}}</td> 
                 </tr>
             {% endfor %}
         </tbody>

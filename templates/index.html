@@ -58,62 +58,63 @@
         }
     </style>
 </head>
-
 <body>
     <header>
-        <h1>Car and Bike Reviews and Specifications</h1>
+        <h1>Features and Specifications</h1>
     </header>
 
     <form action="/review" method="POST">
-        <label for="car-dropdown">Select a Car Company:</label>
-        <select id="car-dropdown">
-            <option value="volvo">Volvo</option>
-            <option value="toyota">Toyota</option>
-            <option value="honda">Honda</option>
-            <option value="ford">Ford</option>
-            <option value="bmw">BMW</option>
+        <label for="query">Select a Car Company:</label>
+        <select id="query" name='query'>
+             <option value="aston-martin">Aston-Martin</option>
+             <option value="audi">Audi</option>
+             <option value="bajaj">Bajaj</option>
+             <option value="bentley">Bentley</option>
+             <option value="bmw">BMW</option>
+             <option value="bugatti">Bugatti</option>
+             <option value="byd">BYD</option>
+             <option value="citroen">Citroen</option>
+             <option value="ferrari">Ferrari</option>
+             <option value="fisker">Fisker</option>
+             <option value="force-motors">Force-Motors</option>
+             <option value="ford">Ford</option>
+             <option value="haval">Haval</option>
+             <option value="honda">Honda</option>
+             <option value="hyundai">Hyundai</option>
+             <option value="isuzu">ISUZU</option>
+             <option value="jaguar">Jaguar</option>
+             <option value="jeep">Jeep</option>
+             <option value="kia">Kia</option>
+             <option value="lamborghini">Lamborghini</option>
+             <option value="land-rover">Land-Rover</option>
+             <option value="lexus">Lexus</option>
+             <option value="lotus">Lotus</option>
+             <option value="maserati">Maserati</option>
+             <option value="maruti-suzuki">Maruti-Suzuki</option>
+             <option value="mahindra">Mahindra</option>
+             <option value="mclaren">Mclaren</option>
+             <option value="mercedes-benz">Mercedes-Benz</option>
+             <option value="mg-motor">MG-Motor</option>
+             <option value="mini">MINI</option>
+             <option value="mitsubishi">Mitsubishi</option>
+             <option value="nissan">Nissan</option>
+             <option value="ola-electric">OLA-Electric</option>
+             <option value="ora">ORA</option>
+             <option value="pmv">PMV</option>
+             <option value="porsche">Porsche</option>
+             <option value="pravaig">Pravaig</option>
+             <option value="renault">Renault</option>
+             <option value="rolls-royce">Rolls-Royce</option>
+             <option value="skoda">Skoda</option>
+             <option value="strom-motors">Strom-Motors</option>
+             <option value="tata">Tata</option>
+             <option value="tesla">Tesla</option>
+             <option value="toyota">Toyota</option>
+             <option value="volkswagen">Volkswagen</option>
         </select>
-
-        <label for="bike-dropdown">Select a Bike Company:</label>
-        <select id="bike-dropdown">
-            <option value="royal-enfield">Royal-Enfield</option>
-            <option value="Harley-Davidson">Harley-Davidson</option>
-            <option value="yamaha">Yamaha</option>
-            <option value="suzuki">Suzuki</option>
-            <option value="ducati">Ducati</option>
-            <option value="kawasaki">Kawasaki</option>
-        </select>
-        
         <button type="submit">Submit</button>
-        <button type="button" id="cancel-button" disabled>Reset</button>
+        
     </form>
+    
 </body>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var carDropdown = document.getElementById('car-dropdown');
-        var bikeDropdown = document.getElementById('bike-dropdown');
-        var cancelButton = document.getElementById('cancel-button');
-
-        carDropdown.addEventListener('change', function() {
-            // Disable the bike dropdown when a car is selected
-            bikeDropdown.disabled = true;
-            cancelButton.disabled = false; // Enable the cancel button
-        });
-
-        bikeDropdown.addEventListener('change', function() {
-            // Disable the car dropdown when a bike is selected
-            carDropdown.disabled = true;
-            cancelButton.disabled = false; // Enable the cancel button
-        });
-
-        cancelButton.addEventListener('click', function() {
-            // Reset both dropdowns and disable the cancel button
-            carDropdown.disabled = false;
-            bikeDropdown.disabled = false;
-            cancelButton.disabled = true;
-        });
-    });
-</script>
-
 </html>
