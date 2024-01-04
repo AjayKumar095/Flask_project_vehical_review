@@ -7,7 +7,7 @@ import requests
 app = Flask(__name__)
 
 
-client = MongoClient('mongodb+srv://jaykumar002kori:GvlkAZqob1TdfrSz@cluster0.wxxmacs.mongodb.net/?retryWrites=true&w=majority')  
+client = MongoClient('Paste_your_mongodb_client_id')  
 db = client['vehicals_database']  
 collection = db['vehicals_data'] 
 
